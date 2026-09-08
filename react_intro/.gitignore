@@ -1,3 +1,2 @@
 node_modules
-task_5/dashboard/dist/*
-!task_5/dashboard/dist/index.html
+task_5/dashboard/dist/*.jpg
