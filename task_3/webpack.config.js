@@ -18,7 +18,7 @@ module.exports = {
       import: "./modules/footer/footer.js",
       dependOn: "shared",
     },
-    shared: "jquery",
+    shared: ["jquery", "lodash"],
   },
   output: {
     path: path.resolve(__dirname, "public"),
@@ -60,6 +60,9 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      chunks: ["shared", "header", "body", "footer"],
+      chunksSortMode: "manual",
+    }),
   ],
 };
