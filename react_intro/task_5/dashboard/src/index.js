@@ -15,4 +15,4 @@ const subtitle = document.createElement("p");
 subtitle.textContent = "Dashboard data for the students";
 dashboard.appendChild(subtitle);
 
-document.body.appendChild(dashboard);
+document.getElementById("root").appendChild(dashboard);
