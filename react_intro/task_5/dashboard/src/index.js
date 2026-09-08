@@ -1,12 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 
-const App = () => (
-  <div className="dashboard">
-    <h1>Holberton Dashboard</h1>
-    <p>Dashboard data for the students</p>
-  </div>
-);
+const dashboard = document.createElement("div");
+dashboard.className = "dashboard";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const logo = document.createElement("div");
+logo.id = "logo";
+dashboard.appendChild(logo);
+
+const title = document.createElement("h1");
+title.textContent = "Holberton Dashboard";
+dashboard.appendChild(title);
+
+const subtitle = document.createElement("p");
+subtitle.textContent = "Dashboard data for the students";
+dashboard.appendChild(subtitle);
+
+document.body.appendChild(dashboard);

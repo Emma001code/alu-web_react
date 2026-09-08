@@ -28,5 +28,4 @@ Holberton School project: introduction to React, components, and testing with En
 - enzyme
 - enzyme-adapter-react-16
 - webpack / webpack-cli / webpack-dev-server
-- react / react-dom
-- babel-loader / style-loader / css-loader / image-webpack-loader
+- style-loader / css-loader / file-loader / image-webpack-loader

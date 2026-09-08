@@ -1,2 +1,3 @@
 node_modules
-task_5/dashboard/dist/bundle.js
+task_5/dashboard/dist/*
+!task_5/dashboard/dist/index.html
