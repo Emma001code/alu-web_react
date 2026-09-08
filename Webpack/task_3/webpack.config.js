@@ -6,19 +6,9 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   entry: {
-    header: {
-      import: "./modules/header/header.js",
-      dependOn: "shared",
-    },
-    body: {
-      import: "./modules/body/body.js",
-      dependOn: "shared",
-    },
-    footer: {
-      import: "./modules/footer/footer.js",
-      dependOn: "shared",
-    },
-    shared: ["jquery", "lodash"],
+    header: "./modules/header/header.js",
+    body: "./modules/body/body.js",
+    footer: "./modules/footer/footer.js",
   },
   output: {
     path: path.resolve(__dirname, "public"),
@@ -33,9 +23,6 @@ module.exports = {
     static: path.join(__dirname, "./public"),
     open: true,
     port: 8564,
-  },
-  performance: {
-    maxAssetSize: 1000000,
   },
   module: {
     rules: [
@@ -60,9 +47,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
-      chunks: ["shared", "header", "body", "footer"],
-      chunksSortMode: "manual",
-    }),
+    new HtmlWebpackPlugin(),
   ],
 };
